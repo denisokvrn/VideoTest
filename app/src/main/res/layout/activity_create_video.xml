@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.denisokvrn.testvideo.MainActivity">
+
+    <ru.denisokvrn.testvideo.SquareFrameLayout
+        android:id="@+id/camera_container"
+        android:layout_width="match_parent"
+        android:background="#000"
+        android:layout_height="wrap_content">
+
+        <com.flurgle.camerakit.CameraView
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            app:ckCropOutput="true"
+            app:ckFlash="off"
+            app:ckFocus="continuous"
+            app:ckMethod="standard"
+            app:ckPermissions="picture"
+            app:ckVideoQuality="max720p"/>
+
+    </ru.denisokvrn.testvideo.SquareFrameLayout>
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="start record"/>
+
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:enabled="false"
+        android:text="stop record"/>
+</FrameLayout>
